@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C# &amp; .NET Developer Learning Hub</title>
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>⌗</text></svg>">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="icon-btn" id="menu-btn" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="#/">
+    <span class="brand-mark">C#</span>
+    <span class="brand-text">.NET Learning Hub</span>
+  </a>
+  <button class="search-trigger" id="search-trigger">
+    <span>Search lessons, code, exercises…</span><kbd>⌘K</kbd>
+  </button>
+  <div class="topbar-right">
+    <a class="ghost-btn" href="#/roadmap">Roadmap</a>
+    <a class="ghost-btn" href="#/project">Project</a>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-progress">
+      <div class="sp-row"><span>Course progress</span><strong id="sp-pct">0%</strong></div>
+      <div class="bar"><i id="sp-bar" style="width:0%"></i></div>
+      <div class="sp-meta" id="sp-meta">—</div>
+    </div>
+    <nav id="nav"></nav>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <main id="main" tabindex="-1"></main>
+</div>
+
+<div class="search-modal" id="search-modal" hidden>
+  <div class="search-panel">
+    <input id="search-input" type="search" placeholder="Search everything…" autocomplete="off" spellcheck="false">
+    <div id="search-results" class="search-results"></div>
+    <div class="search-foot"><kbd>↑</kbd><kbd>↓</kbd> navigate · <kbd>↵</kbd> open · <kbd>esc</kbd> close</div>
+  </div>
+</div>
+
+<script src="assets/vendor/marked.min.js"></script>
+<script src="assets/vendor/highlight.min.js"></script>
+<script src="assets/vendor/hl-csharp.min.js"></script>
+<script src="assets/vendor/hl-bash.min.js"></script>
+<script src="assets/vendor/hl-json.min.js"></script>
+<script src="assets/vendor/hl-xml.min.js"></script>
+<script src="assets/vendor/hl-sql.min.js"></script>
+<script src="assets/vendor/hl-yaml.min.js"></script>
+<script src="assets/vendor/hl-dockerfile.min.js"></script>
+<script src="assets/vendor/hl-ini.min.js"></script>
+<script src="assets/vendor/hl-plaintext.min.js"></script>
+<script src="assets/render.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

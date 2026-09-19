@@ -1,0 +1,6 @@
+{
+ "order": 11,
+ "title": "SOLID & Design Principles",
+ "blurb": "Each principle shown as bad code, the pain it causes, the refactor, and the result — applied to TaskFlow.",
+ "goal": "Spot a SOLID violation in real code and refactor it without over-engineering."
+}

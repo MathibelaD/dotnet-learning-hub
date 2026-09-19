@@ -1,0 +1,6 @@
+{
+ "order": 12,
+ "title": "Design Patterns",
+ "blurb": "Factory, Strategy, Adapter, Decorator, Observer, Builder, Repository and Unit of Work — and when not to use them.",
+ "goal": "Recognise the problem shape a pattern solves, and resist adding abstraction that pays for nothing."
+}

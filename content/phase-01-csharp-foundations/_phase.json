@@ -1,0 +1,6 @@
+{
+ "order": 1,
+ "title": "Modern C# Foundations",
+ "blurb": "The type system, OOP in C#, generics, nullability and exceptions — the parts that are genuinely C#-specific.",
+ "goal": "Model the TaskFlow domain in idiomatic modern C# and defend every choice of class vs record vs struct."
+}

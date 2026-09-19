@@ -1,0 +1,6 @@
+{
+ "order": 9,
+ "title": "Authentication & Security",
+ "blurb": "Password hashing, JWT, claims, roles, policies, refresh tokens, CORS, secrets and the OWASP basics.",
+ "goal": "Ship an API where users register, log in, and can only reach the data they are allowed to reach."
+}

@@ -1,0 +1,6 @@
+{
+ "order": 14,
+ "title": "Production .NET",
+ "blurb": "Structured logging, health checks, caching, rate limiting, background services, resilience and observability.",
+ "goal": "Operate the API: see what it is doing, protect it from abuse, and keep it alive under failure."
+}

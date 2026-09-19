@@ -1,0 +1,6 @@
+{
+ "order": 15,
+ "title": "Docker & Deployment",
+ "blurb": "Images, containers, Dockerfiles, compose, and running the whole stack the way a server would.",
+ "goal": "Build and run the entire application with one command on any machine that has Docker."
+}

@@ -1,0 +1,6 @@
+{
+ "order": 5,
+ "title": ".NET Fundamentals",
+ "blurb": "SDK, runtime, the dotnet CLI, projects, NuGet, configuration, dependency injection and logging.",
+ "goal": "Create, build, configure and publish a .NET solution from the terminal without an IDE doing it for you."
+}

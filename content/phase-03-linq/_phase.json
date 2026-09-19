@@ -1,0 +1,6 @@
+{
+ "order": 3,
+ "title": "LINQ",
+ "blurb": "Querying collections and databases with the same syntax, and understanding what actually executes.",
+ "goal": "Write and read non-trivial LINQ queries from memory, and explain deferred execution and IEnumerable vs IQueryable."
+}

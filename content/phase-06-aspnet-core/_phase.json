@@ -1,0 +1,6 @@
+{
+ "order": 6,
+ "title": "ASP.NET Core",
+ "blurb": "Controllers, minimal APIs, routing, model binding, validation, middleware, filters and OpenAPI.",
+ "goal": "Build a REST API with correct status codes, validated input, sane error responses and generated documentation."
+}

@@ -1,0 +1,6 @@
+{
+ "order": 2,
+ "title": "C# Features You Actually Use",
+ "blurb": "Delegates, lambdas, events, extension methods, tuples, iterators, attributes and pattern matching.",
+ "goal": "Recognise which language feature solves a problem in front of you, instead of memorising a feature list."
+}

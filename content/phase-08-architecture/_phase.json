@@ -1,0 +1,6 @@
+{
+ "order": 8,
+ "title": "Application Architecture",
+ "blurb": "Separation of concerns, services, repositories, DTOs, layers and Clean Architecture — with the trade-offs stated out loud.",
+ "goal": "Restructure a working application into layers and explain what each boundary buys you and what it costs."
+}

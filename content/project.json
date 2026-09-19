@@ -1,0 +1,102 @@
+{
+  "name": "TaskFlow — the project you build",
+  "summary": "One application, built across all sixteen phases. It starts as a console app that holds tasks in a list and ends as a containerised ASP.NET Core API with PostgreSQL, JWT authentication, layered architecture, a test suite and structured logging. You never throw the code away and start again — each stage refactors what you already wrote.",
+  "stages": [
+    {
+      "title": "Console task manager",
+      "phases": "Phases 1–4",
+      "goal": "Model the domain in C# and manipulate tasks in memory. No database, no web, no frameworks — just the language.",
+      "deliverables": [
+        "TaskItem, Project, User, TaskStatus, Priority as records/classes/enums",
+        "An in-memory TaskStore with add, complete, delete and query operations",
+        "LINQ-powered filtering, grouping and reporting",
+        "Async simulated I/O with cancellation support"
+      ],
+      "run": "dotnet run --project project/src/TaskFlow.Console"
+    },
+    {
+      "title": "A proper .NET solution",
+      "phases": "Phase 5",
+      "goal": "Turn a single file of code into a real solution with projects, packages, configuration and dependency injection.",
+      "deliverables": [
+        "TaskFlow.sln with Domain, Application and Console projects",
+        "Directory.Build.props with shared settings",
+        "appsettings.json + environment variable configuration",
+        "Generic Host with DI and logging wired up"
+      ],
+      "run": "dotnet build && dotnet run --project project/src/TaskFlow.Console"
+    },
+    {
+      "title": "REST API",
+      "phases": "Phase 6",
+      "goal": "Expose the domain over HTTP with correct status codes, DTOs, validation and OpenAPI docs.",
+      "deliverables": [
+        "GET/POST/PUT/DELETE /api/tasks with an in-memory store",
+        "Request and response DTOs separate from domain models",
+        "FluentValidation or DataAnnotations model validation",
+        "ProblemDetails error handling middleware and Swagger UI"
+      ],
+      "run": "dotnet run --project project/src/TaskFlow.Api"
+    },
+    {
+      "title": "PostgreSQL + EF Core",
+      "phases": "Phase 7",
+      "goal": "Replace the in-memory store with a real relational database and migrations.",
+      "deliverables": [
+        "TaskFlowDbContext with entity configurations",
+        "Users, Projects, Tasks, Comments, Labels and the many-to-many join",
+        "EF Core migrations applied to a Dockerised PostgreSQL",
+        "Pagination, filtering and search done in SQL, not in memory"
+      ],
+      "run": "docker compose up -d db && dotnet ef database update"
+    },
+    {
+      "title": "Authentication and authorization",
+      "phases": "Phase 9",
+      "goal": "Let real users register, log in and only touch their own data.",
+      "deliverables": [
+        "Registration with password hashing",
+        "JWT access tokens plus refresh tokens",
+        "Claims, roles and policy-based authorization",
+        "Ownership checks so a user cannot read another user's tasks"
+      ],
+      "run": "curl -X POST localhost:5080/api/auth/login -d '{...}'"
+    },
+    {
+      "title": "Architecture clean-up",
+      "phases": "Phases 8, 11, 12",
+      "goal": "Restructure into layers you can justify, applying SOLID and only the patterns that earn their keep.",
+      "deliverables": [
+        "Domain / Application / Infrastructure / Api projects with enforced dependencies",
+        "Services behind interfaces, registered with the DI container",
+        "Mapping between entities and DTOs",
+        "A written note in the repo explaining each architectural trade-off"
+      ],
+      "run": "dotnet build"
+    },
+    {
+      "title": "Tests",
+      "phases": "Phase 10",
+      "goal": "Prove the behaviour, so you can refactor without fear.",
+      "deliverables": [
+        "xUnit unit tests for domain rules and services",
+        "Mocked dependencies with NSubstitute",
+        "Integration tests using WebApplicationFactory",
+        "Database tests against a real PostgreSQL in Testcontainers"
+      ],
+      "run": "dotnet test"
+    },
+    {
+      "title": "Production ready",
+      "phases": "Phases 13–15",
+      "goal": "Make it something you would be comfortable deploying and operating.",
+      "deliverables": [
+        "Structured logging, health checks, caching and rate limiting",
+        "Background service for notifications and audit history",
+        "Multi-stage Dockerfile and docker compose with PostgreSQL",
+        "Environment-based configuration and secret handling"
+      ],
+      "run": "docker compose up --build"
+    }
+  ]
+}

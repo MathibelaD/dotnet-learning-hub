@@ -1,0 +1,6 @@
+{
+ "order": 0,
+ "title": "Orientation",
+ "blurb": "How this hub works, what C# and .NET actually are, and getting your machine ready.",
+ "goal": "Explain the relationship between C#, .NET, ASP.NET Core, EF Core and NuGet, and run your first program from the terminal."
+}

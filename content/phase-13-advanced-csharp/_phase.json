@@ -1,0 +1,6 @@
+{
+ "order": 13,
+ "title": "Advanced C#",
+ "blurb": "Reflection, expression trees, memory and GC, IDisposable, Span<T>, boxing, threading and concurrent collections.",
+ "goal": "Reason about allocations, disposal and thread safety, and measure instead of guessing."
+}

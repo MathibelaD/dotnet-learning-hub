@@ -1,0 +1,6 @@
+{
+ "order": 4,
+ "title": "Async Programming",
+ "blurb": "Task, async/await, cancellation, parallel work and the mistakes that cause deadlocks.",
+ "goal": "Write correct async code end to end, cancel it cleanly, and diagnose a blocked or swallowed Task."
+}

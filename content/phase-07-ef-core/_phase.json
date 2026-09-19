@@ -1,0 +1,6 @@
+{
+ "order": 7,
+ "title": "Entity Framework Core",
+ "blurb": "DbContext, entities, relationships, migrations, tracking, transactions, concurrency and query performance.",
+ "goal": "Design a relational schema from C# types, migrate it, and write queries that translate to efficient SQL."
+}

@@ -1,0 +1,6 @@
+{
+ "order": 10,
+ "title": "Testing",
+ "blurb": "xUnit, test doubles, mocking, integration tests with WebApplicationFactory and real database tests.",
+ "goal": "Write tests that catch real regressions, and know which kind of test to reach for."
+}
