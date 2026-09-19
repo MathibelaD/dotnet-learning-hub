@@ -1,0 +1,30 @@
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+.vs/
+.vscode/
+.idea/
+.DS_Store
+
+# secrets and local configuration — never commit
+.env
+appsettings.Local.json
+appsettings.*.Local.json
+*.pfx
+*.key
+
+# test and benchmark output
+TestResults/
+BenchmarkDotNet.Artifacts/
+coverage/
+*.trx
+*.coverage
+*.cobertura.xml
+
+# artefacts
+artifacts/
+publish/
+*.nupkg

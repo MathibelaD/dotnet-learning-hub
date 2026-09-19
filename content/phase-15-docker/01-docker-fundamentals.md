@@ -186,7 +186,8 @@ For each, predict the failure, reproduce it, diagnose it from the logs, and fix 
 
 **5 — empty logs.** Docker captures stdout and stderr of PID 1. If the application writes to a file, or buffers stdout without flushing, or logs from a child process, nothing appears. Fix: log to the console, and make sure the console sink flushes. For Serilog, the console sink is unbuffered by default; a file sink writes nowhere Docker can see.
 
-::: note .NET and container memory limits
+### .NET and container memory limits
+
 .NET reads cgroup limits and sizes its heap accordingly, so a container limited to 512 MB gets a smaller GC budget automatically. That works — but `ServerGarbageCollection` creates one heap per core, and in a container limited to 0.5 CPU but able to *see* 16 cores, it creates 16 heaps and uses far more memory than intended.
 
 ```yaml
@@ -199,7 +200,6 @@ deploy:
 ```
 
 Or set `DOTNET_GCHeapCount`. Exit code 137 on a service that looks idle is very often this.
-:::
 :::
 
 ::: project Containerise the database properly

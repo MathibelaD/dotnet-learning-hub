@@ -1,6 +1,6 @@
 {
   "name": "TaskFlow — the project you build",
-  "summary": "One application, built across all sixteen phases. It starts as a console app that holds tasks in a list and ends as a containerised ASP.NET Core API with PostgreSQL, JWT authentication, layered architecture, a test suite and structured logging. You never throw the code away and start again — each stage refactors what you already wrote.",
+  "summary": "One application, built across all sixteen phases. It starts as a console app that holds tasks in a list and ends as a containerised ASP.NET Core API with PostgreSQL, JWT authentication, layered architecture, a test suite and structured logging. You never throw the code away and start again — each stage refactors what you already wrote. You create it at ~/taskflow in Phase 0; the hub's project/starter-kit folder has the build configuration, compose file and scripts to copy in.",
   "stages": [
     {
       "title": "Console task manager",
