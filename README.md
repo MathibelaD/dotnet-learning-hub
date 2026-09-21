@@ -1,156 +1,110 @@
-# C# &amp; .NET Developer Learning Hub
 
-A hands-on curriculum that takes an experienced programmer from "I know how to code"
-to "I can build, secure, test, operate and explain a production .NET service."
+# .NET Engineering Learning Hub
 
-It is **not** a documentation site. Every lesson ends with you writing code, and one
-application — **TaskFlow**, a task management API — grows across all sixteen phases
-from a console app to a containerised ASP.NET Core service on PostgreSQL.
+A personal learning and interview preparation project focused on building stronger software engineering foundations with C# and .NET.
 
-```
-104 lessons · 99 exercises · 89 challenges · 103 project steps · ~1,060 code snippets · ~73 hours
-```
+I created this learning hub to move beyond knowing how to write code and develop a deeper understanding of how to design, build, test, secure, and operate software in a production environment.
 
-## Running it
+The goal is not simply to complete tutorials or learn individual concepts in isolation. It is to build the knowledge, practical experience, and confidence needed to explain engineering decisions and work on real-world applications.
 
-```bash
-./serve.sh
-```
+## Why I Created This
 
-Then open <http://localhost:4173>.
+As a software developer, I want to continuously strengthen my technical foundations and become more confident in the way I approach software engineering.
 
-`serve.sh` regenerates the content index and starts a static server. It needs **Python 3**
-and nothing else — no npm install, no build step, no backend. The Markdown renderer and
-syntax highlighter are vendored in `assets/vendor/`, so it works offline.
+This project gives me a structured space to study concepts, practise writing code, challenge my understanding, and apply what I learn to a continuously evolving application.
 
-Use a different port with `./serve.sh 8000`.
+Instead of building separate examples for every topic and moving on, I wanted to connect the concepts through one project that grows with my learning.
 
-> Open `index.html` directly from disk and it will not work: browsers block local file
-> reads, so the app cannot load its content. Use the server.
+The learning hub is designed around a simple principle:
 
-## What you get
+> **Do not optimise for reading. Optimise for doing.**
 
-- **Sidebar navigation** grouped by phase, with per-phase and overall progress
-- **Search** across every lesson, heading and code snippet (`⌘K` or `/`)
-- **Progress tracking** — completed lessons, checkpoint checkboxes and project stages,
-  saved in your browser's `localStorage`. No account, nothing sent anywhere.
-- **Collapsed solutions** that stay shut until you open them, because attempting first
-  is the entire point
-- **Dark and light themes**, and a layout that works on a phone
-- **Previous/next navigation**, copy buttons on every code block
+The focus is on writing code, solving problems, understanding trade-offs, and developing the ability to explain why a particular approach was chosen.
 
-## The curriculum
+## What This Project Contains
 
-| Phase | | Project stage |
-|---|---|---|
-| 00 | Orientation — C#, .NET and the ecosystem | Stage 1 |
-| 01 | Modern C# foundations | Stage 1 |
-| 02 | C# features you actually use | Stage 1 |
-| 03 | LINQ | Stage 1 |
-| 04 | Async programming | Stage 1 |
-| 05 | .NET fundamentals | Stage 2 |
-| 06 | ASP.NET Core | Stage 3 |
-| 07 | Entity Framework Core | Stage 4 |
-| 08 | Application architecture | — |
-| 09 | Authentication &amp; security | Stage 5 |
-| 10 | Testing | Stage 7 |
-| 11 | SOLID &amp; design principles | Stage 6 |
-| 12 | Design patterns | Stage 6 |
-| 13 | Advanced C# | — |
-| 14 | Production .NET | — |
-| 15 | Docker &amp; deployment | Stage 8 |
-| 16 | Capstone &amp; interview preparation | — |
+The learning hub contains a structured C# and .NET curriculum covering:
 
-Every lesson follows the same shape: what we are learning → why it matters → a small
-example → **your turn** → a challenge → **apply it to the project** → common mistakes →
-a checkpoint → the solution, collapsed.
+- C# foundations and modern language features
+- Object-oriented programming and design principles
+- LINQ and asynchronous programming
+- .NET fundamentals and application development
+- ASP.NET Core and REST APIs
+- Entity Framework Core and PostgreSQL
+- Application architecture and Clean Architecture
+- Authentication and security
+- Automated testing and integration testing
+- SOLID principles and design patterns
+- Advanced C# concepts, memory, and concurrency
+- Production .NET, observability, and resilience
+- Docker and deployment
+- Capstone development and interview preparation
 
-## The project
+The curriculum is organised into **17 phases (00–16)**, with 104 lessons and practical exercises, challenges, and project steps.
 
-You build TaskFlow yourself at `~/taskflow`. What the repo provides is the tedious
-supporting configuration — see [project/README.md](project/README.md):
+It is built to encourage active learning rather than passive reading. Lessons include opportunities to write code, diagnose mistakes, reason about design decisions, and apply concepts to the main project.
 
-```bash
-mkdir -p ~/taskflow && cd ~/taskflow && git init
-cp -r <this repo>/project/starter-kit/. .
-cp .env.example .env          # fill in DB_PASSWORD
-chmod +x scripts/*.sh
-docker compose up -d
-```
+## TaskFlow
 
-That gives you nullable reference types, warnings-as-errors, the analysers the lessons
-rely on, PostgreSQL and Redis in Docker, and wrapper scripts for build and migrations.
-Everything else you write.
+TaskFlow is the continuously evolving application used throughout the learning journey.
 
-## Prerequisites
+It starts as a console-based task management application and progresses towards a containerised ASP.NET Core API with PostgreSQL, authentication, layered architecture, testing, and production-oriented capabilities.
 
-| | Why |
-|---|---|
-| .NET 10 SDK | The whole course |
-| Docker | PostgreSQL from Phase 0, the app from Phase 15 |
-| Git | From Phase 0 — every project step ends in a commit |
-| An editor | VS Code + C# Dev Kit, Rider, or Visual Studio |
-| Python 3 | Only to serve this hub |
+The purpose of TaskFlow is to connect theory with practical software development.
 
-Check with `dotnet --version`, `docker --version`, `git --version`.
+As the curriculum progresses, the application provides an opportunity to explore:
 
-## Adding or editing lessons
+- Domain modelling and object-oriented design
+- API development and data persistence
+- Authentication and authorisation
+- Application architecture and separation of concerns
+- Automated testing
+- Caching, logging, and observability
+- Docker and deployment
 
-Content is plain Markdown under `content/<phase>/<NN>-<slug>.md`, with front matter:
+TaskFlow is built separately from this learning hub. The curriculum and supporting configuration are maintained in this repository, while the application itself is developed independently.
 
-```markdown
+## Learning Approach
+
+The curriculum is designed around practice and progressive application.
+
+Each phase introduces concepts that build on previous knowledge, while TaskFlow evolves alongside the learning process.
+
+The learning approach includes:
+
+- Writing code instead of relying only on explanations
+- Applying concepts to a single evolving application
+- Working through exercises and challenges
+- Learning from common mistakes and debugging scenarios
+- Thinking through architectural and design trade-offs
+- Preparing to explain technical decisions during interviews
+
+The aim is to develop not only the ability to implement features, but also the ability to understand, evaluate, and communicate engineering decisions.
+
+## Learning Hub Technology
+
+The learning hub itself is a lightweight static website built with:
+
+- HTML
+- CSS
+- Vanilla JavaScript
+- Python (content index generation)
+- Markdown
+- Marked.js
+- Highlight.js
+
+It does not require a frontend framework, npm, or a backend to run.
+
+The hub includes client-side navigation, search, progress tracking, themes, and locally stored learning progress. Its Markdown renderer and syntax highlighter are vendored to support offline use.
+
+## Project Status
+
+This repository contains the learning curriculum, the learning hub, and the supporting configuration for TaskFlow.
+
+The curriculum currently includes 17 phases, 104 lessons, and 8 TaskFlow project stages.
+
+The learning content is designed to support an ongoing engineering development journey, with a focus on strengthening practical skills and preparing for software engineering interviews.
+
 ---
-title: Classes, objects and constructors
-summary: One line, shown in the sidebar and in search results.
-minutes: 40
-stage: Stage 1
----
 
-## What are we learning?
-…
-```
-
-Lessons use a small block syntax on top of Markdown:
-
-```markdown
-::: exercise Level 1 — Guided · Build TaskItem four ways
-Instructions.
-:::
-
-::: solution
-Stays collapsed until clicked.
-:::
-```
-
-Available blocks: `exercise`, `challenge`, `project`, `checkpoint`, `stop`, `mistake`,
-`debug`, `predict`, `refactor`, `design`, `why`, `note`, `warn`, `recap`, and the
-collapsible `hint`, `solution` and `interview`. Blocks do not nest.
-
-Add a file, run `python3 tools/build.py` (or just `./serve.sh`), and it appears.
-Phases are directories containing a `_phase.json`.
-
-## Layout
-
-```
-index.html              the shell
-assets/
-  app.js                router, progress, search
-  render.js             Markdown + the ::: block syntax
-  styles.css            tokens, layout, both themes
-  vendor/               marked + highlight.js, vendored for offline use
-content/
-  phase-NN-*/           _phase.json + lesson Markdown
-  project.json          the eight project stages
-  index.json            generated — do not edit
-  search.json           generated — do not edit
-tools/build.py          scans content/, writes the two generated files
-project/starter-kit/    build config, compose file and scripts for TaskFlow
-serve.sh                build + serve
-```
-
-## The rule this was built around
-
-> Do not optimise for reading. Optimise for doing.
-
-Roughly 10% explanation, 20% examples, 70% you writing code. If you are scrolling and
-nodding, you are doing it wrong — open a terminal.
+**Built as part of my journey to become a stronger, more confident software engineer.**
