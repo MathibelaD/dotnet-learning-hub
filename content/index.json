@@ -1,0 +1,3192 @@
+{
+ "generated": "2026-09-21T14:24:46",
+ "phases": [
+  {
+   "id": "phase-00-orientation",
+   "order": 0,
+   "title": "Orientation",
+   "blurb": "How this hub works, what C# and .NET actually are, and getting your machine ready.",
+   "goal": "Explain the relationship between C#, .NET, ASP.NET Core, EF Core and NuGet, and run your first program from the terminal.",
+   "lessons": [
+    {
+     "id": "phase-00-orientation/01-how-to-use-this-hub",
+     "path": "content/phase-00-orientation/01-how-to-use-this-hub.md",
+     "title": "How to use this hub",
+     "summary": "The rules of engagement. Read this once, properly, then never passively read again.",
+     "minutes": 15,
+     "stage": "Stage 1",
+     "blocks": {
+      "solution": 1,
+      "exercise": 1,
+      "stop": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 896,
+     "snippets": 1,
+     "headings": [
+      "What are we learning?",
+      "The loop",
+      "The four exercise levels",
+      "Solutions are collapsed on purpose",
+      "Your progress is saved locally",
+      "The project",
+      "Common mistakes people make with courses like this",
+      "Checkpoint"
+     ]
+    },
+    {
+     "id": "phase-00-orientation/02-csharp-and-dotnet",
+     "path": "content/phase-00-orientation/02-csharp-and-dotnet.md",
+     "title": "C#, .NET and the ecosystem",
+     "summary": "The mental model that stops the naming from confusing you for the next six months.",
+     "minutes": 25,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1303,
+     "snippets": 6,
+     "headings": [
+      "What are we learning?",
+      "The mental model",
+      "Said precisely",
+      "Example",
+      "How code gets from your file to running",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-00-orientation/03-environment-setup",
+     "path": "content/phase-00-orientation/03-environment-setup.md",
+     "title": "Your environment, from the terminal",
+     "summary": "SDK, CLI, editor, PostgreSQL and Docker — configured once, used for the whole course.",
+     "minutes": 30,
+     "stage": "Stage 1",
+     "blocks": {
+      "why": 1,
+      "exercise": 2,
+      "note": 1,
+      "solution": 2,
+      "challenge": 1,
+      "project": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1306,
+     "snippets": 11,
+     "headings": [
+      "What are we learning?",
+      "The pieces",
+      "Example — the CLI commands you will use every day",
+      "Editor setup",
+      "PostgreSQL with Docker",
+      "Common mistakes"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-01-csharp-foundations",
+   "order": 1,
+   "title": "Modern C# Foundations",
+   "blurb": "The type system, OOP in C#, generics, nullability and exceptions — the parts that are genuinely C#-specific.",
+   "goal": "Model the TaskFlow domain in idiomatic modern C# and defend every choice of class vs record vs struct.",
+   "lessons": [
+    {
+     "id": "phase-01-csharp-foundations/01-program-structure",
+     "path": "content/phase-01-csharp-foundations/01-program-structure.md",
+     "title": "Project structure and program entry",
+     "summary": "Namespaces, usings, top-level statements, and what the compiler is actually doing with your file.",
+     "minutes": 30,
+     "stage": "Stage 1",
+     "blocks": {
+      "note": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1102,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "The smallest program",
+      "Namespaces and usings",
+      "`using` has a second, unrelated meaning",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-01-csharp-foundations/02-classes-objects-constructors",
+     "path": "content/phase-01-csharp-foundations/02-classes-objects-constructors.md",
+     "title": "Classes, objects and constructors",
+     "summary": "Reference semantics, constructor overloads, primary constructors, initialisers and object initialisers.",
+     "minutes": 40,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 1,
+      "exercise": 2,
+      "solution": 3,
+      "debug": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1681,
+     "snippets": 14,
+     "headings": [
+      "What are we learning?",
+      "Classes are reference types",
+      "Four ways to construct",
+      "Primary constructors",
+      "Where primary constructors shine",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-01-csharp-foundations/03-properties-fields-access",
+     "path": "content/phase-01-csharp-foundations/03-properties-fields-access.md",
+     "title": "Fields, properties and access modifiers",
+     "summary": "Why C# has properties at all, what the compiler generates, and how to choose an access level on purpose.",
+     "minutes": 35,
+     "stage": "Stage 1",
+     "blocks": {
+      "note": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 2,
+      "debug": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1470,
+     "snippets": 10,
+     "headings": [
+      "What are we learning?",
+      "A property is a pair of methods",
+      "The full range",
+      "Access modifiers",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-01-csharp-foundations/04-static-const-readonly",
+     "path": "content/phase-01-csharp-foundations/04-static-const-readonly.md",
+     "title": "Static members, const and readonly",
+     "summary": "Three ways to say \"this does not change\", and they mean different things at different times.",
+     "minutes": 30,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 2,
+      "predict": 1,
+      "solution": 3,
+      "exercise": 1,
+      "debug": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1566,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "Static: belongs to the type, not the instance",
+      "`const`: compile-time constant, baked into callers",
+      "`readonly`: assignable only in the constructor",
+      "The comparison",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-01-csharp-foundations/05-structs-records-value-semantics",
+     "path": "content/phase-01-csharp-foundations/05-structs-records-value-semantics.md",
+     "title": "Value types, structs and records",
+     "summary": "class vs struct vs record — the decision you make every time you create a type, and how to make it on purpose.",
+     "minutes": 45,
+     "stage": "Stage 1",
+     "blocks": {
+      "design": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 3,
+      "debug": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1882,
+     "snippets": 14,
+     "headings": [
+      "What are we learning?",
+      "Reference vs value, demonstrated",
+      "Equality, demonstrated",
+      "Records in full",
+      "Choosing",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-01-csharp-foundations/06-enums-and-pattern-matching",
+     "path": "content/phase-01-csharp-foundations/06-enums-and-pattern-matching.md",
+     "title": "Enums and pattern matching",
+     "summary": "Modelling a closed set of states, and the switch expression that makes working with them a pleasure.",
+     "minutes": 40,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 2,
+      "note": 1,
+      "exercise": 1,
+      "solution": 2,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1691,
+     "snippets": 13,
+     "headings": [
+      "What are we learning?",
+      "Enums",
+      "Pattern matching",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-01-csharp-foundations/07-interfaces-inheritance-polymorphism",
+     "path": "content/phase-01-csharp-foundations/07-interfaces-inheritance-polymorphism.md",
+     "title": "Interfaces, abstract classes and polymorphism",
+     "summary": "What each abstraction buys you, what it costs, and how to choose between them without cargo-culting.",
+     "minutes": 45,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 1,
+      "design": 1,
+      "exercise": 2,
+      "solution": 2,
+      "debug": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1721,
+     "snippets": 8,
+     "headings": [
+      "What are we learning?",
+      "Interfaces: a contract with no implementation (mostly)",
+      "Abstract classes: partial implementation plus state",
+      "`virtual`, `override`, `new`, `sealed`",
+      "Choosing between them",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-01-csharp-foundations/08-composition-over-inheritance",
+     "path": "content/phase-01-csharp-foundations/08-composition-over-inheritance.md",
+     "title": "Composition over inheritance",
+     "summary": "Why the inheritance hierarchy you are about to draw is probably wrong, and what to build instead.",
+     "minutes": 35,
+     "stage": "Stage 1",
+     "blocks": {
+      "why": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1468,
+     "snippets": 9,
+     "headings": [
+      "What are we learning?",
+      "The setup that always happens",
+      "The composition version",
+      "The other composition: delegation",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-01-csharp-foundations/09-generics",
+     "path": "content/phase-01-csharp-foundations/09-generics.md",
+     "title": "Generics",
+     "summary": "Type parameters, constraints, variance — and why generics are not just \"templates for collections\".",
+     "minutes": 40,
+     "stage": "Stage 1",
+     "blocks": {
+      "why": 1,
+      "exercise": 1,
+      "solution": 2,
+      "challenge": 1,
+      "debug": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1691,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "The problem generics solve",
+      "Constraints",
+      "Generic methods and inference",
+      "`default(T)`",
+      "Variance: `out` and `in`",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-01-csharp-foundations/10-collections",
+     "path": "content/phase-01-csharp-foundations/10-collections.md",
+     "title": "Collections",
+     "summary": "Which collection to reach for, what each costs, and the interfaces you should be declaring instead.",
+     "minutes": 35,
+     "stage": "Stage 1",
+     "blocks": {
+      "design": 1,
+      "predict": 1,
+      "solution": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1471,
+     "snippets": 8,
+     "headings": [
+      "What are we learning?",
+      "The types you actually use",
+      "Collection expressions",
+      "Declare the interface, return the concrete type",
+      "Equality, again",
+      "Small things that save you",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-01-csharp-foundations/11-nullable-reference-types",
+     "path": "content/phase-01-csharp-foundations/11-nullable-reference-types.md",
+     "title": "Nullable reference types",
+     "summary": "The feature that moves NullReferenceException from runtime to compile time — if you let it.",
+     "minutes": 35,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 2,
+      "debug": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1676,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "The problem",
+      "Turning it on",
+      "The warnings you will meet",
+      "How to satisfy the compiler",
+      "The null-forgiving operator",
+      "Fixing `CS8618` on a property",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-01-csharp-foundations/12-exceptions",
+     "path": "content/phase-01-csharp-foundations/12-exceptions.md",
+     "title": "Exception handling",
+     "summary": "When to throw, when to catch, what never to do, and how not to destroy a stack trace.",
+     "minutes": 35,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 1,
+      "design": 1,
+      "exercise": 1,
+      "predict": 1,
+      "solution": 2,
+      "debug": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1591,
+     "snippets": 11,
+     "headings": [
+      "What are we learning?",
+      "The syntax, quickly",
+      "The three rethrow forms, and why only one is right",
+      "Custom exceptions",
+      "Which built-in exception to throw",
+      "When *not* to use exceptions",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-01-csharp-foundations/13-project-domain-model",
+     "path": "content/phase-01-csharp-foundations/13-project-domain-model.md",
+     "title": "Checkpoint: the TaskFlow domain model",
+     "summary": "No new concepts. Build the complete domain model for the application with everything from Phase 1.",
+     "minutes": 90,
+     "stage": "Stage 1",
+     "blocks": {
+      "stop": 1,
+      "design": 1,
+      "project": 1,
+      "checkpoint": 2,
+      "solution": 1,
+      "interview": 1
+     },
+     "words": 1815,
+     "snippets": 4,
+     "headings": [
+      "What are we learning?",
+      "The requirements",
+      "Design decisions you must make and be able to justify"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-02-csharp-features",
+   "order": 2,
+   "title": "C# Features You Actually Use",
+   "blurb": "Delegates, lambdas, events, extension methods, tuples, iterators, attributes and pattern matching.",
+   "goal": "Recognise which language feature solves a problem in front of you, instead of memorising a feature list.",
+   "lessons": [
+    {
+     "id": "phase-02-csharp-features/01-delegates-and-lambdas",
+     "path": "content/phase-02-csharp-features/01-delegates-and-lambdas.md",
+     "title": "Delegates and lambdas",
+     "summary": "Passing behaviour as a value — the foundation under LINQ, events, DI and every callback you will write.",
+     "minutes": 40,
+     "stage": "Stage 1",
+     "blocks": {
+      "predict": 1,
+      "solution": 3,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1731,
+     "snippets": 16,
+     "headings": [
+      "What are we learning?",
+      "A delegate is a type",
+      "Four ways to produce one",
+      "Closures",
+      "Multicast delegates",
+      "Where you will actually meet delegates",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-02-csharp-features/02-events",
+     "path": "content/phase-02-csharp-features/02-events.md",
+     "title": "Events",
+     "summary": "Delegates with access control — and why modern .NET often reaches for something else instead.",
+     "minutes": 30,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 1,
+      "predict": 1,
+      "solution": 2,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1659,
+     "snippets": 8,
+     "headings": [
+      "What are we learning?",
+      "An event is a delegate with two restrictions",
+      "The standard pattern",
+      "Subscribing",
+      "The event memory leak",
+      "When not to use events",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-02-csharp-features/03-extension-methods",
+     "path": "content/phase-02-csharp-features/03-extension-methods.md",
+     "title": "Extension methods",
+     "summary": "Adding methods to types you do not own — how LINQ exists at all, and how to not abuse it.",
+     "minutes": 25,
+     "stage": "Stage 1",
+     "blocks": {
+      "why": 1,
+      "exercise": 1,
+      "solution": 2,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1564,
+     "snippets": 10,
+     "headings": [
+      "What are we learning?",
+      "The mechanism",
+      "What they can and cannot do",
+      "Extending interfaces is where it pays off",
+      "Discovery: extensions need a `using`",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-02-csharp-features/04-tuples-and-deconstruction",
+     "path": "content/phase-02-csharp-features/04-tuples-and-deconstruction.md",
+     "title": "Tuples and deconstruction",
+     "summary": "Returning more than one value without inventing a class, and taking things apart in one line.",
+     "minutes": 25,
+     "stage": "Stage 1",
+     "blocks": {
+      "design": 1,
+      "predict": 1,
+      "solution": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1521,
+     "snippets": 10,
+     "headings": [
+      "What are we learning?",
+      "Value tuples",
+      "Deconstruction",
+      "Where tuples are genuinely right",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-02-csharp-features/05-parameters-ref-out-in",
+     "path": "content/phase-02-csharp-features/05-parameters-ref-out-in.md",
+     "title": "Parameters — ref, out, in, params and named arguments",
+     "summary": "Every way to pass a value into a method, and what each one actually does to memory.",
+     "minutes": 30,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 1,
+      "predict": 1,
+      "solution": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1679,
+     "snippets": 17,
+     "headings": [
+      "What are we learning?",
+      "Default: pass by value",
+      "`ref` — pass the variable itself",
+      "`out` — the method must assign it",
+      "`in` — pass by reference, read-only",
+      "`params`",
+      "Optional parameters and named arguments",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-02-csharp-features/06-iterators-and-yield",
+     "path": "content/phase-02-csharp-features/06-iterators-and-yield.md",
+     "title": "Iterators and yield",
+     "summary": "Producing a sequence lazily — what `yield return` compiles to and why it changes performance.",
+     "minutes": 30,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 2,
+      "predict": 1,
+      "solution": 4,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1875,
+     "snippets": 14,
+     "headings": [
+      "What are we learning?",
+      "The problem",
+      "What `yield` actually does",
+      "`yield break` and infinite sequences",
+      "Restrictions",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-02-csharp-features/07-attributes",
+     "path": "content/phase-02-csharp-features/07-attributes.md",
+     "title": "Attributes",
+     "summary": "Metadata attached to your code that frameworks read at runtime — and the cost of that convenience.",
+     "minutes": 25,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 1,
+      "exercise": 1,
+      "solution": 2,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1495,
+     "snippets": 10,
+     "headings": [
+      "What are we learning?",
+      "Attributes are inert",
+      "Attributes you will meet",
+      "Writing your own",
+      "Reading them",
+      "The caller-info attributes",
+      "Common mistakes"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-03-linq",
+   "order": 3,
+   "title": "LINQ",
+   "blurb": "Querying collections and databases with the same syntax, and understanding what actually executes.",
+   "goal": "Write and read non-trivial LINQ queries from memory, and explain deferred execution and IEnumerable vs IQueryable.",
+   "lessons": [
+    {
+     "id": "phase-03-linq/01-linq-fundamentals",
+     "path": "content/phase-03-linq/01-linq-fundamentals.md",
+     "title": "LINQ fundamentals — Where and Select",
+     "summary": "Filtering and projecting. Two operators that replace most of the loops you have ever written.",
+     "minutes": 40,
+     "stage": "Stage 1",
+     "blocks": {
+      "note": 1,
+      "warn": 1,
+      "exercise": 1,
+      "solution": 3,
+      "predict": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1792,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "The setup",
+      "The model: a pipeline of sequences",
+      "`Where` — keep the ones that match",
+      "`Select` — transform each element",
+      "Reading a real query",
+      "Query syntax",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-03-linq/02-ordering-and-elements",
+     "path": "content/phase-03-linq/02-ordering-and-elements.md",
+     "title": "Ordering and element operators",
+     "summary": "OrderBy, ThenBy, and the First/Single/Last family — including which one throws and when.",
+     "minutes": 35,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 2,
+      "design": 1,
+      "predict": 1,
+      "solution": 3,
+      "exercise": 1,
+      "debug": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1654,
+     "snippets": 11,
+     "headings": [
+      "What are we learning?",
+      "Ordering",
+      "The element operators",
+      "Paging",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-03-linq/03-quantifiers-and-aggregation",
+     "path": "content/phase-03-linq/03-quantifiers-and-aggregation.md",
+     "title": "Quantifiers and aggregation",
+     "summary": "Any, All, Count, Sum, Average, Min, Max and Aggregate — and the subtle cost differences between them.",
+     "minutes": 30,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 2,
+      "design": 1,
+      "predict": 1,
+      "solution": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1538,
+     "snippets": 13,
+     "headings": [
+      "What are we learning?",
+      "Quantifiers",
+      "Counting",
+      "Aggregation",
+      "`Aggregate` — the general case",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-03-linq/04-grouping-and-joining",
+     "path": "content/phase-03-linq/04-grouping-and-joining.md",
+     "title": "Grouping and joining",
+     "summary": "GroupBy, ToLookup, Join and GroupJoin — turning flat sequences into structured reports.",
+     "minutes": 40,
+     "stage": "Stage 1",
+     "blocks": {
+      "note": 1,
+      "exercise": 1,
+      "solution": 3,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1820,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "`GroupBy`",
+      "`ToLookup`",
+      "`Join` — inner join",
+      "`GroupJoin` — left outer join",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-03-linq/05-selectmany-and-set-operations",
+     "path": "content/phase-03-linq/05-selectmany-and-set-operations.md",
+     "title": "SelectMany, set operations and query syntax",
+     "summary": "Flattening nested sequences, combining sets, and when the SQL-like syntax is actually the better choice.",
+     "minutes": 35,
+     "stage": "Stage 1",
+     "blocks": {
+      "note": 1,
+      "predict": 1,
+      "solution": 3,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1804,
+     "snippets": 19,
+     "headings": [
+      "What are we learning?",
+      "`SelectMany` flattens",
+      "Set operations",
+      "`Zip`",
+      "Query syntax, where it wins",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-03-linq/06-deferred-execution",
+     "path": "content/phase-03-linq/06-deferred-execution.md",
+     "title": "Deferred execution, IEnumerable and IQueryable",
+     "summary": "The most important LINQ lesson. What runs, when it runs, and where it runs.",
+     "minutes": 40,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 1,
+      "predict": 1,
+      "solution": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1735,
+     "snippets": 13,
+     "headings": [
+      "What are we learning?",
+      "A query is a recipe, not a meal",
+      "Which operators execute immediately?",
+      "The three bugs deferred execution causes",
+      "`IEnumerable<T>` versus `IQueryable<T>`",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-03-linq/07-project-query-engine",
+     "path": "content/phase-03-linq/07-project-query-engine.md",
+     "title": "Checkpoint: the TaskFlow query engine",
+     "summary": "Build the filtering, sorting, searching and paging engine the API will expose in Phase 6.",
+     "minutes": 75,
+     "stage": "Stage 1",
+     "blocks": {
+      "stop": 1,
+      "checkpoint": 2,
+      "project": 1,
+      "solution": 1,
+      "interview": 1
+     },
+     "words": 1465,
+     "snippets": 5,
+     "headings": [
+      "What are we learning?",
+      "The target",
+      "Requirements",
+      "Checkpoint"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-04-async",
+   "order": 4,
+   "title": "Async Programming",
+   "blurb": "Task, async/await, cancellation, parallel work and the mistakes that cause deadlocks.",
+   "goal": "Write correct async code end to end, cancel it cleanly, and diagnose a blocked or swallowed Task.",
+   "lessons": [
+    {
+     "id": "phase-04-async/01-task-async-await",
+     "path": "content/phase-04-async/01-task-async-await.md",
+     "title": "Task, async and await",
+     "summary": "What await actually does to your method, and why async is about threads you are NOT using.",
+     "minutes": 45,
+     "stage": "Stage 1",
+     "blocks": {
+      "why": 1,
+      "note": 1,
+      "warn": 1,
+      "predict": 1,
+      "solution": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1816,
+     "snippets": 13,
+     "headings": [
+      "What are we learning?",
+      "The wrong mental model",
+      "The right mental model",
+      "`Task` and `Task<T>`",
+      "`async` and `await`",
+      "The three return types",
+      "Naming and conventions",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-04-async/02-async-all-the-way",
+     "path": "content/phase-04-async/02-async-all-the-way.md",
+     "title": "Async all the way — and the deadlock",
+     "summary": "The rules that keep async code correct, and the classic deadlock demonstrated rather than described.",
+     "minutes": 40,
+     "stage": "Stage 1",
+     "blocks": {
+      "note": 1,
+      "design": 1,
+      "debug": 1,
+      "solution": 2,
+      "exercise": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1830,
+     "snippets": 15,
+     "headings": [
+      "What are we learning?",
+      "The rule",
+      "The blocking calls to never write",
+      "`ConfigureAwait(false)`",
+      "The exception to the rule: `Main`",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-04-async/03-cancellation",
+     "path": "content/phase-04-async/03-cancellation.md",
+     "title": "Cancellation",
+     "summary": "CancellationToken — how to accept one, how to honour it, and how to create one.",
+     "minutes": 35,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 1,
+      "predict": 1,
+      "solution": 3,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1739,
+     "snippets": 9,
+     "headings": [
+      "What are we learning?",
+      "Cooperative means the code must check",
+      "Accepting a token",
+      "Creating one",
+      "Responding to cancellation",
+      "Registering a callback",
+      "Where the token comes from",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-04-async/04-parallel-and-whenall",
+     "path": "content/phase-04-async/04-parallel-and-whenall.md",
+     "title": "Parallel work, WhenAll and concurrency limits",
+     "summary": "Doing several things at once safely — and knowing when concurrency is not the answer.",
+     "minutes": 40,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 2,
+      "design": 1,
+      "predict": 1,
+      "solution": 3,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 2066,
+     "snippets": 17,
+     "headings": [
+      "What are we learning?",
+      "Sequential versus concurrent",
+      "`Task.WhenAll`",
+      "`Task.WhenAny`",
+      "Limiting concurrency",
+      "Shared state is where this goes wrong",
+      "CPU-bound work: `Task.Run` and `Parallel.For`",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-04-async/05-async-streams-and-exceptions",
+     "path": "content/phase-04-async/05-async-streams-and-exceptions.md",
+     "title": "Async streams, ValueTask and async exceptions",
+     "summary": "IAsyncEnumerable, await foreach, when ValueTask is worth it, and how exceptions really flow through tasks.",
+     "minutes": 40,
+     "stage": "Stage 1",
+     "blocks": {
+      "warn": 1,
+      "design": 1,
+      "predict": 1,
+      "solution": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1663,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "`IAsyncEnumerable<T>` — lazy, but async",
+      "`ValueTask<T>`",
+      "How exceptions flow",
+      "Exception handling patterns",
+      "Common mistakes"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-05-dotnet",
+   "order": 5,
+   "title": ".NET Fundamentals",
+   "blurb": "SDK, runtime, the dotnet CLI, projects, NuGet, configuration, dependency injection and logging.",
+   "goal": "Create, build, configure and publish a .NET solution from the terminal without an IDE doing it for you.",
+   "lessons": [
+    {
+     "id": "phase-05-dotnet/01-sdk-runtime-cli",
+     "path": "content/phase-05-dotnet/01-sdk-runtime-cli.md",
+     "title": "SDK, runtime and the dotnet CLI",
+     "summary": "What is actually installed on your machine, and driving all of it from the terminal.",
+     "minutes": 35,
+     "stage": "Stage 2",
+     "blocks": {
+      "note": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1588,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "SDK versus runtime",
+      "Version selection",
+      "The commands",
+      "`publish` and its modes",
+      "Global tools",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-05-dotnet/02-projects-and-csproj",
+     "path": "content/phase-05-dotnet/02-projects-and-csproj.md",
+     "title": "Projects, solutions and the .csproj file",
+     "summary": "MSBuild without the mystery — what is in a project file and how to control the whole solution from one place.",
+     "minutes": 35,
+     "stage": "Stage 2",
+     "blocks": {
+      "note": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1236,
+     "snippets": 7,
+     "headings": [
+      "What are we learning?",
+      "A modern `.csproj` is small",
+      "The properties worth knowing",
+      "Items",
+      "`Directory.Build.props` — set it once for the whole solution",
+      "Conditions",
+      "Debugging the build",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-05-dotnet/03-nuget",
+     "path": "content/phase-05-dotnet/03-nuget.md",
+     "title": "NuGet and dependency management",
+     "summary": "Adding packages, pinning versions centrally, and treating dependencies as a liability you manage.",
+     "minutes": 30,
+     "stage": "Stage 2",
+     "blocks": {
+      "warn": 1,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1239,
+     "snippets": 10,
+     "headings": [
+      "What are we learning?",
+      "The basics",
+      "Version ranges",
+      "Central Package Management",
+      "Transitive dependencies",
+      "Choosing a dependency",
+      "Security",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-05-dotnet/04-configuration",
+     "path": "content/phase-05-dotnet/04-configuration.md",
+     "title": "Configuration and environments",
+     "summary": "appsettings, environment variables, user secrets, the options pattern, and never committing a password.",
+     "minutes": 40,
+     "stage": "Stage 2",
+     "blocks": {
+      "design": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1457,
+     "snippets": 14,
+     "headings": [
+      "What are we learning?",
+      "Configuration is layered",
+      "Setting it up",
+      "`appsettings.json`",
+      "Environments",
+      "The options pattern",
+      "Secrets",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-05-dotnet/05-dependency-injection",
+     "path": "content/phase-05-dotnet/05-dependency-injection.md",
+     "title": "Dependency injection and the generic host",
+     "summary": "The container, the three lifetimes, and the mistakes that cause the weirdest bugs in .NET.",
+     "minutes": 45,
+     "stage": "Stage 2",
+     "blocks": {
+      "warn": 2,
+      "exercise": 1,
+      "solution": 2,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1803,
+     "snippets": 15,
+     "headings": [
+      "What are we learning?",
+      "The problem DI solves",
+      "Registration",
+      "The three lifetimes",
+      "Resolution",
+      "Registration extension methods",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-05-dotnet/06-logging",
+     "path": "content/phase-05-dotnet/06-logging.md",
+     "title": "Logging",
+     "summary": "ILogger, structured logging and log levels — writing logs someone can actually query.",
+     "minutes": 35,
+     "stage": "Stage 2",
+     "blocks": {
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1736,
+     "snippets": 11,
+     "headings": [
+      "What are we learning?",
+      "`ILogger<T>`",
+      "Structured logging",
+      "Levels",
+      "Configuring levels",
+      "Scopes",
+      "Exceptions",
+      "High-performance logging",
+      "Common mistakes"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-06-aspnet-core",
+   "order": 6,
+   "title": "ASP.NET Core",
+   "blurb": "Controllers, minimal APIs, routing, model binding, validation, middleware, filters and OpenAPI.",
+   "goal": "Build a REST API with correct status codes, validated input, sane error responses and generated documentation.",
+   "lessons": [
+    {
+     "id": "phase-06-aspnet-core/01-first-web-api",
+     "path": "content/phase-06-aspnet-core/01-first-web-api.md",
+     "title": "Your first Web API",
+     "summary": "Minimal APIs and controllers side by side, and what the request pipeline actually is.",
+     "minutes": 40,
+     "stage": "Stage 3",
+     "blocks": {
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1609,
+     "snippets": 13,
+     "headings": [
+      "What are we learning?",
+      "The smallest API",
+      "What `WebApplication.CreateBuilder` gives you",
+      "Two styles",
+      "Ports and launch settings",
+      "Testing an API from the terminal",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-06-aspnet-core/02-routing",
+     "path": "content/phase-06-aspnet-core/02-routing.md",
+     "title": "Routing and HTTP semantics",
+     "summary": "Route templates, constraints, and designing URLs that do not embarrass you in six months.",
+     "minutes": 35,
+     "stage": "Stage 3",
+     "blocks": {
+      "design": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1611,
+     "snippets": 8,
+     "headings": [
+      "What are we learning?",
+      "Route templates",
+      "Where values come from",
+      "Designing the URLs",
+      "HTTP method semantics",
+      "Route matching order",
+      "Generating URLs",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-06-aspnet-core/03-model-binding-and-dtos",
+     "path": "content/phase-06-aspnet-core/03-model-binding-and-dtos.md",
+     "title": "Model binding and DTOs",
+     "summary": "How JSON becomes a C# object, and why your API must never expose domain entities directly.",
+     "minutes": 40,
+     "stage": "Stage 3",
+     "blocks": {
+      "why": 1,
+      "warn": 1,
+      "exercise": 1,
+      "debug": 1,
+      "solution": 2,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1889,
+     "snippets": 13,
+     "headings": [
+      "What are we learning?",
+      "Binding sources",
+      "DTOs: the rule",
+      "Mapping",
+      "`System.Text.Json`",
+      "Custom binding",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-06-aspnet-core/04-validation",
+     "path": "content/phase-06-aspnet-core/04-validation.md",
+     "title": "Validation",
+     "summary": "Rejecting bad input at the boundary, with error messages a client can act on.",
+     "minutes": 35,
+     "stage": "Stage 3",
+     "blocks": {
+      "warn": 1,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1688,
+     "snippets": 11,
+     "headings": [
+      "What are we learning?",
+      "Data annotations",
+      "FluentValidation",
+      "Running validators",
+      "Where does validation belong?",
+      "Error response shape",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-06-aspnet-core/05-middleware",
+     "path": "content/phase-06-aspnet-core/05-middleware.md",
+     "title": "Middleware and the request pipeline",
+     "summary": "The chain every request passes through, why order matters more than anything, and writing your own.",
+     "minutes": 40,
+     "stage": "Stage 3",
+     "blocks": {
+      "warn": 3,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1639,
+     "snippets": 8,
+     "headings": [
+      "What are we learning?",
+      "The pipeline",
+      "Writing one",
+      "Order",
+      "Reading and rewriting the body",
+      "Short-circuiting",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-06-aspnet-core/06-filters",
+     "path": "content/phase-06-aspnet-core/06-filters.md",
+     "title": "Filters and cross-cutting concerns",
+     "summary": "MVC's interception points — and knowing when a filter is right and when middleware is.",
+     "minutes": 30,
+     "stage": "Stage 3",
+     "blocks": {
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1594,
+     "snippets": 7,
+     "headings": [
+      "What are we learning?",
+      "The filter pipeline",
+      "Action filters",
+      "Exception filters",
+      "Endpoint filters (minimal APIs)",
+      "Filter order",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-06-aspnet-core/07-error-handling",
+     "path": "content/phase-06-aspnet-core/07-error-handling.md",
+     "title": "Error handling and ProblemDetails",
+     "summary": "One place that turns any exception into a correct, safe, useful HTTP response.",
+     "minutes": 35,
+     "stage": "Stage 3",
+     "blocks": {
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1459,
+     "snippets": 8,
+     "headings": [
+      "What are we learning?",
+      "The goal",
+      "`ProblemDetails` (RFC 9457)",
+      "Setup",
+      "An `IExceptionHandler`",
+      "Mapping the whole exception vocabulary",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-06-aspnet-core/08-openapi",
+     "path": "content/phase-06-aspnet-core/08-openapi.md",
+     "title": "OpenAPI and documentation",
+     "summary": "Generated, accurate, executable documentation — and why hand-written API docs always rot.",
+     "minutes": 30,
+     "stage": "Stage 3",
+     "blocks": {
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1183,
+     "snippets": 9,
+     "headings": [
+      "What are we learning?",
+      "Built-in OpenAPI",
+      "Making the document accurate",
+      "Examples and schema detail",
+      "What the document buys you",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-06-aspnet-core/09-project-taskflow-api",
+     "path": "content/phase-06-aspnet-core/09-project-taskflow-api.md",
+     "title": "Checkpoint: the TaskFlow API",
+     "summary": "Assemble everything from Phase 6 into a complete, documented, correctly-behaving REST API.",
+     "minutes": 120,
+     "stage": "Stage 3",
+     "blocks": {
+      "stop": 1,
+      "checkpoint": 2,
+      "project": 1,
+      "solution": 1,
+      "interview": 1
+     },
+     "words": 1124,
+     "snippets": 4,
+     "headings": [
+      "What are we learning?",
+      "The deliverable",
+      "Requirements",
+      "Checkpoint"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-07-ef-core",
+   "order": 7,
+   "title": "Entity Framework Core",
+   "blurb": "DbContext, entities, relationships, migrations, tracking, transactions, concurrency and query performance.",
+   "goal": "Design a relational schema from C# types, migrate it, and write queries that translate to efficient SQL.",
+   "lessons": [
+    {
+     "id": "phase-07-ef-core/01-dbcontext-first-query",
+     "path": "content/phase-07-ef-core/01-dbcontext-first-query.md",
+     "title": "DbContext and your first query",
+     "summary": "Connecting to PostgreSQL, and seeing the SQL your C# produces.",
+     "minutes": 40,
+     "stage": "Stage 4",
+     "blocks": {
+      "note": 1,
+      "warn": 1,
+      "exercise": 1,
+      "predict": 1,
+      "solution": 2,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1744,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "What EF Core is",
+      "Setup",
+      "The DbContext",
+      "Registration",
+      "Your first query",
+      "Seeing the SQL",
+      "Raw SQL, when you need it",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-07-ef-core/02-modelling-entities",
+     "path": "content/phase-07-ef-core/02-modelling-entities.md",
+     "title": "Modelling entities",
+     "summary": "Mapping C# types to tables with conventions, Fluent API and value objects.",
+     "minutes": 40,
+     "stage": "Stage 4",
+     "blocks": {
+      "design": 1,
+      "warn": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1785,
+     "snippets": 11,
+     "headings": [
+      "What are we learning?",
+      "Conventions first",
+      "Fluent API in a configuration class",
+      "Private fields and encapsulation",
+      "Value objects",
+      "Computed and ignored members",
+      "Global query filters",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-07-ef-core/03-relationships",
+     "path": "content/phase-07-ef-core/03-relationships.md",
+     "title": "Relationships",
+     "summary": "One-to-one, one-to-many and many-to-many — and the loading strategy that decides your performance.",
+     "minutes": 45,
+     "stage": "Stage 4",
+     "blocks": {
+      "design": 1,
+      "warn": 1,
+      "exercise": 1,
+      "predict": 1,
+      "solution": 2,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 2202,
+     "snippets": 14,
+     "headings": [
+      "What are we learning?",
+      "One-to-many",
+      "Always include the foreign key property",
+      "One-to-one",
+      "Many-to-many",
+      "Loading related data",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-07-ef-core/04-migrations",
+     "path": "content/phase-07-ef-core/04-migrations.md",
+     "title": "Migrations and seeding",
+     "summary": "Evolving a schema safely, including the part everyone gets wrong — data that already exists.",
+     "minutes": 40,
+     "stage": "Stage 4",
+     "blocks": {
+      "warn": 1,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1879,
+     "snippets": 15,
+     "headings": [
+      "What are we learning?",
+      "The commands",
+      "What a migration is",
+      "Applying in production",
+      "Zero-downtime migrations",
+      "Seeding",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-07-ef-core/05-querying-and-tracking",
+     "path": "content/phase-07-ef-core/05-querying-and-tracking.md",
+     "title": "Querying and change tracking",
+     "summary": "What tracking costs, when to turn it off, and why some LINQ cannot become SQL.",
+     "minutes": 40,
+     "stage": "Stage 4",
+     "blocks": {
+      "design": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1859,
+     "snippets": 14,
+     "headings": [
+      "What are we learning?",
+      "What tracking does",
+      "`AsNoTracking`",
+      "Inspecting the tracker",
+      "Translation limits",
+      "Expression trees, revisited",
+      "Rewriting the search",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-07-ef-core/06-saving-and-transactions",
+     "path": "content/phase-07-ef-core/06-saving-and-transactions.md",
+     "title": "Saving data and transactions",
+     "summary": "SaveChanges as a unit of work, and controlling what happens when part of an operation fails.",
+     "minutes": 35,
+     "stage": "Stage 4",
+     "blocks": {
+      "warn": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1580,
+     "snippets": 9,
+     "headings": [
+      "What are we learning?",
+      "`SaveChanges` is already a transaction",
+      "Adding, updating, deleting",
+      "Explicit transactions",
+      "Retrying transient failures",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-07-ef-core/07-concurrency",
+     "path": "content/phase-07-ef-core/07-concurrency.md",
+     "title": "Concurrency",
+     "summary": "Two users editing the same row — the lost update, and the two ways to prevent it.",
+     "minutes": 35,
+     "stage": "Stage 4",
+     "blocks": {
+      "design": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1745,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "The lost update",
+      "Optimistic concurrency",
+      "Handling the conflict",
+      "Exposing it over HTTP",
+      "Pessimistic concurrency",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-07-ef-core/08-performance",
+     "path": "content/phase-07-ef-core/08-performance.md",
+     "title": "Query performance",
+     "summary": "Finding the slow query, understanding why it is slow, and fixing it with evidence.",
+     "minutes": 40,
+     "stage": "Stage 4",
+     "blocks": {
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1511,
+     "snippets": 13,
+     "headings": [
+      "What are we learning?",
+      "The method",
+      "Step 2 — counting queries",
+      "The five common causes",
+      "Reading a plan",
+      "Compiled queries",
+      "Pooling",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-07-ef-core/09-project-persistence",
+     "path": "content/phase-07-ef-core/09-project-persistence.md",
+     "title": "Checkpoint: TaskFlow on PostgreSQL",
+     "summary": "Stage 4 complete — the API runs on a real relational database with migrations, relationships and measured performance.",
+     "minutes": 90,
+     "stage": "Stage 4",
+     "blocks": {
+      "stop": 1,
+      "checkpoint": 2,
+      "project": 1,
+      "solution": 1,
+      "interview": 1
+     },
+     "words": 906,
+     "snippets": 3,
+     "headings": [
+      "What are we learning?",
+      "The deliverable",
+      "Checkpoint"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-08-architecture",
+   "order": 8,
+   "title": "Application Architecture",
+   "blurb": "Separation of concerns, services, repositories, DTOs, layers and Clean Architecture — with the trade-offs stated out loud.",
+   "goal": "Restructure a working application into layers and explain what each boundary buys you and what it costs.",
+   "lessons": [
+    {
+     "id": "phase-08-architecture/01-separation-of-concerns",
+     "path": "content/phase-08-architecture/01-separation-of-concerns.md",
+     "title": "Separation of concerns",
+     "summary": "What actually goes wrong in a codebase with no boundaries — demonstrated, then fixed.",
+     "minutes": 35,
+     "stage": "",
+     "blocks": {
+      "why": 1,
+      "design": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1587,
+     "snippets": 4,
+     "headings": [
+      "What are we learning?",
+      "The codebase that has no boundaries",
+      "The separation",
+      "Where people overdo it",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-08-architecture/02-repository-and-unit-of-work",
+     "path": "content/phase-08-architecture/02-repository-and-unit-of-work.md",
+     "title": "Repositories and Unit of Work",
+     "summary": "The most argued-about pattern in .NET — what it is for, and why EF Core changes the answer.",
+     "minutes": 40,
+     "stage": "",
+     "blocks": {
+      "warn": 1,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1719,
+     "snippets": 6,
+     "headings": [
+      "What are we learning?",
+      "What they are",
+      "The uncomfortable fact",
+      "The case for a repository over EF Core",
+      "The case against",
+      "Do you need an explicit Unit of Work?",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-08-architecture/03-dtos-and-mapping",
+     "path": "content/phase-08-architecture/03-dtos-and-mapping.md",
+     "title": "DTOs, commands and mapping",
+     "summary": "The types that cross each boundary, and whether a mapping library earns its place.",
+     "minutes": 30,
+     "stage": "",
+     "blocks": {
+      "design": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1412,
+     "snippets": 6,
+     "headings": [
+      "What are we learning?",
+      "The types",
+      "Mapping: by hand",
+      "Mapping: with a library",
+      "Projections are mapping",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-08-architecture/04-clean-architecture",
+     "path": "content/phase-08-architecture/04-clean-architecture.md",
+     "title": "Clean Architecture, honestly",
+     "summary": "The dependency rule, what it buys, what it costs, and when it is the wrong choice.",
+     "minutes": 40,
+     "stage": "",
+     "blocks": {
+      "note": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1707,
+     "snippets": 5,
+     "headings": [
+      "What are we learning?",
+      "The one idea",
+      "How the inversion works",
+      "The projects",
+      "What it buys you",
+      "What it costs",
+      "Enforcing the boundaries",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-08-architecture/05-project-restructure",
+     "path": "content/phase-08-architecture/05-project-restructure.md",
+     "title": "Checkpoint: restructure TaskFlow",
+     "summary": "Apply the architecture to the whole application, and write down what it cost.",
+     "minutes": 90,
+     "stage": "",
+     "blocks": {
+      "stop": 1,
+      "checkpoint": 2,
+      "project": 1,
+      "solution": 1,
+      "interview": 1
+     },
+     "words": 1006,
+     "snippets": 4,
+     "headings": [
+      "What are we learning?",
+      "The deliverable",
+      "Requirements",
+      "Checkpoint"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-09-auth",
+   "order": 9,
+   "title": "Authentication & Security",
+   "blurb": "Password hashing, JWT, claims, roles, policies, refresh tokens, CORS, secrets and the OWASP basics.",
+   "goal": "Ship an API where users register, log in, and can only reach the data they are allowed to reach.",
+   "lessons": [
+    {
+     "id": "phase-09-auth/01-authn-vs-authz",
+     "path": "content/phase-09-auth/01-authn-vs-authz.md",
+     "title": "Authentication vs authorization",
+     "summary": "Two different questions, two different mechanisms, and the pipeline order that ties them together.",
+     "minutes": 30,
+     "stage": "Stage 5",
+     "blocks": {
+      "warn": 2,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1668,
+     "snippets": 9,
+     "headings": [
+      "What are we learning?",
+      "The two questions",
+      "How ASP.NET Core models identity",
+      "The two middlewares",
+      "Schemes",
+      "`[Authorize]`",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-09-auth/02-passwords-and-registration",
+     "path": "content/phase-09-auth/02-passwords-and-registration.md",
+     "title": "Passwords and registration",
+     "summary": "Storing credentials so that a database breach is survivable.",
+     "minutes": 40,
+     "stage": "Stage 5",
+     "blocks": {
+      "why": 1,
+      "warn": 2,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1792,
+     "snippets": 7,
+     "headings": [
+      "What are we learning?",
+      "Never store a password",
+      "Using the built-in hasher",
+      "Argon2id",
+      "Registration",
+      "Password policy",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-09-auth/03-jwt",
+     "path": "content/phase-09-auth/03-jwt.md",
+     "title": "JWT authentication",
+     "summary": "What is actually inside a token, how validation works, and what a JWT cannot do.",
+     "minutes": 45,
+     "stage": "Stage 5",
+     "blocks": {
+      "warn": 3,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1952,
+     "snippets": 6,
+     "headings": [
+      "What are we learning?",
+      "Anatomy",
+      "Signing",
+      "Issuing",
+      "Validating",
+      "The fundamental limitation",
+      "Where the client stores it",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-09-auth/04-claims-roles-policies",
+     "path": "content/phase-09-auth/04-claims-roles-policies.md",
+     "title": "Claims, roles and policies",
+     "summary": "Expressing real authorization rules — including the ones that depend on the specific resource.",
+     "minutes": 40,
+     "stage": "Stage 5",
+     "blocks": {
+      "note": 1,
+      "warn": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1621,
+     "snippets": 11,
+     "headings": [
+      "What are we learning?",
+      "Roles are the simple case",
+      "Policies",
+      "Resource-based authorization",
+      "Getting the user id",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-09-auth/05-refresh-tokens",
+     "path": "content/phase-09-auth/05-refresh-tokens.md",
+     "title": "Refresh tokens",
+     "summary": "Short-lived access tokens without logging users out every fifteen minutes — and detecting theft.",
+     "minutes": 40,
+     "stage": "Stage 5",
+     "blocks": {
+      "warn": 1,
+      "why": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1869,
+     "snippets": 9,
+     "headings": [
+      "What are we learning?",
+      "The problem",
+      "Access tokens and refresh tokens are different animals",
+      "The record",
+      "Rotation",
+      "Where the client keeps it",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-09-auth/06-security-hardening",
+     "path": "content/phase-09-auth/06-security-hardening.md",
+     "title": "Security hardening",
+     "summary": "CORS, HTTPS, secrets, injection and the OWASP issues that actually appear in .NET APIs.",
+     "minutes": 45,
+     "stage": "Stage 5",
+     "blocks": {
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1936,
+     "snippets": 10,
+     "headings": [
+      "What are we learning?",
+      "CORS",
+      "HTTPS",
+      "Security headers",
+      "Secrets",
+      "Injection",
+      "OWASP Top 10, applied to TaskFlow",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-09-auth/07-project-auth",
+     "path": "content/phase-09-auth/07-project-auth.md",
+     "title": "Checkpoint: TaskFlow with authentication",
+     "summary": "Stage 5 complete — real users, real sessions, and access control you have tried to break.",
+     "minutes": 100,
+     "stage": "Stage 5",
+     "blocks": {
+      "stop": 1,
+      "checkpoint": 2,
+      "project": 1,
+      "solution": 1,
+      "interview": 1
+     },
+     "words": 982,
+     "snippets": 2,
+     "headings": [
+      "What are we learning?",
+      "The deliverable",
+      "Requirements",
+      "Checkpoint"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-10-testing",
+   "order": 10,
+   "title": "Testing",
+   "blurb": "xUnit, test doubles, mocking, integration tests with WebApplicationFactory and real database tests.",
+   "goal": "Write tests that catch real regressions, and know which kind of test to reach for.",
+   "lessons": [
+    {
+     "id": "phase-10-testing/01-testing-fundamentals",
+     "path": "content/phase-10-testing/01-testing-fundamentals.md",
+     "title": "Testing fundamentals with xUnit",
+     "summary": "What to test, what not to, and how to write a test whose failure message tells you what broke.",
+     "minutes": 40,
+     "stage": "",
+     "blocks": {
+      "design": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1658,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "Why xUnit",
+      "The shape of a test",
+      "Naming",
+      "Facts and theories",
+      "Assertions",
+      "What to test",
+      "Coverage",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-10-testing/02-test-doubles-and-mocking",
+     "path": "content/phase-10-testing/02-test-doubles-and-mocking.md",
+     "title": "Test doubles and mocking",
+     "summary": "Fakes, stubs and mocks — what each is for, and why over-mocking produces tests that verify nothing.",
+     "minutes": 40,
+     "stage": "",
+     "blocks": {
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1645,
+     "snippets": 11,
+     "headings": [
+      "What are we learning?",
+      "The five kinds",
+      "NSubstitute",
+      "A service test",
+      "When to verify and when not to",
+      "Fakes are often better than mocks",
+      "`TimeProvider`",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-10-testing/03-integration-testing",
+     "path": "content/phase-10-testing/03-integration-testing.md",
+     "title": "Integration testing the API",
+     "summary": "WebApplicationFactory — testing the real pipeline, real routing, real serialisation, real auth.",
+     "minutes": 40,
+     "stage": "",
+     "blocks": {
+      "note": 1,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1627,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "What unit tests cannot catch",
+      "`WebApplicationFactory`",
+      "Authenticating in tests",
+      "Isolating tests from each other",
+      "Testing the whole shape",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-10-testing/04-database-testing",
+     "path": "content/phase-10-testing/04-database-testing.md",
+     "title": "Database testing with Testcontainers",
+     "summary": "Testing against a real PostgreSQL, automatically, in CI — and why the in-memory provider is a trap.",
+     "minutes": 35,
+     "stage": "",
+     "blocks": {
+      "warn": 1,
+      "note": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1596,
+     "snippets": 10,
+     "headings": [
+      "What are we learning?",
+      "The three options",
+      "Testcontainers",
+      "Sharing the container",
+      "What to test against a real database",
+      "Keeping it fast",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-10-testing/05-project-test-suite",
+     "path": "content/phase-10-testing/05-project-test-suite.md",
+     "title": "Checkpoint: the TaskFlow test suite",
+     "summary": "A test suite you would trust to let you refactor anything.",
+     "minutes": 90,
+     "stage": "",
+     "blocks": {
+      "stop": 1,
+      "checkpoint": 2,
+      "project": 1,
+      "solution": 1,
+      "interview": 1
+     },
+     "words": 1041,
+     "snippets": 5,
+     "headings": [
+      "What are we learning?",
+      "The deliverable",
+      "Requirements",
+      "The real test of a test suite"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-11-solid",
+   "order": 11,
+   "title": "SOLID & Design Principles",
+   "blurb": "Each principle shown as bad code, the pain it causes, the refactor, and the result — applied to TaskFlow.",
+   "goal": "Spot a SOLID violation in real code and refactor it without over-engineering.",
+   "lessons": [
+    {
+     "id": "phase-11-solid/01-single-responsibility",
+     "path": "content/phase-11-solid/01-single-responsibility.md",
+     "title": "Single Responsibility",
+     "summary": "One reason to change\" — what that actually means, and the class that always violates it.",
+     "minutes": 35,
+     "stage": "",
+     "blocks": {
+      "why": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1678,
+     "snippets": 5,
+     "headings": [
+      "What are we learning?",
+      "The principle, stated properly",
+      "The bad implementation",
+      "Why it becomes a problem",
+      "The refactor",
+      "The improved implementation",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-11-solid/02-open-closed",
+     "path": "content/phase-11-solid/02-open-closed.md",
+     "title": "Open/Closed",
+     "summary": "The switch statement that grows forever, and the two ways to stop it.",
+     "minutes": 35,
+     "stage": "",
+     "blocks": {
+      "why": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1689,
+     "snippets": 8,
+     "headings": [
+      "What are we learning?",
+      "The bad implementation",
+      "Why it becomes a problem",
+      "The refactor",
+      "The improved implementation",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-11-solid/03-liskov-substitution",
+     "path": "content/phase-11-solid/03-liskov-substitution.md",
+     "title": "Liskov Substitution",
+     "summary": "A subtype that surprises you is a subtype that breaks callers — the principle behind \"is-a\" actually meaning something.",
+     "minutes": 35,
+     "stage": "",
+     "blocks": {
+      "why": 1,
+      "warn": 1,
+      "exercise": 1,
+      "solution": 2,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 2008,
+     "snippets": 9,
+     "headings": [
+      "What are we learning?",
+      "The bad implementation",
+      "Why it becomes a problem",
+      "The refactor",
+      "The improved implementation",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-11-solid/04-interface-segregation",
+     "path": "content/phase-11-solid/04-interface-segregation.md",
+     "title": "Interface Segregation",
+     "summary": "No client should depend on methods it does not use — and the fat interface that makes testing painful.",
+     "minutes": 30,
+     "stage": "",
+     "blocks": {
+      "why": 1,
+      "note": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1492,
+     "snippets": 7,
+     "headings": [
+      "What are we learning?",
+      "The bad implementation",
+      "Why it becomes a problem",
+      "The refactor",
+      "The improved implementation",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-11-solid/05-dependency-inversion",
+     "path": "content/phase-11-solid/05-dependency-inversion.md",
+     "title": "Dependency Inversion",
+     "summary": "Depend on abstractions — and the crucial detail about who gets to define them.",
+     "minutes": 35,
+     "stage": "",
+     "blocks": {
+      "why": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1541,
+     "snippets": 9,
+     "headings": [
+      "What are we learning?",
+      "The principle, both halves",
+      "The bad implementation",
+      "Why it becomes a problem",
+      "The refactor",
+      "The improved implementation",
+      "Where the concrete types live",
+      "Common mistakes"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-12-patterns",
+   "order": 12,
+   "title": "Design Patterns",
+   "blurb": "Factory, Strategy, Adapter, Decorator, Observer, Builder, Repository and Unit of Work — and when not to use them.",
+   "goal": "Recognise the problem shape a pattern solves, and resist adding abstraction that pays for nothing.",
+   "lessons": [
+    {
+     "id": "phase-12-patterns/01-factory-and-strategy",
+     "path": "content/phase-12-patterns/01-factory-and-strategy.md",
+     "title": "Factory and Strategy",
+     "summary": "Choosing what to create, and choosing how to behave — two patterns you have already used without naming them.",
+     "minutes": 40,
+     "stage": "",
+     "blocks": {
+      "note": 1,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1469,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "The problem shapes",
+      "Factory",
+      "Strategy",
+      "The improved implementation, applied",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-12-patterns/02-decorator-and-adapter",
+     "path": "content/phase-12-patterns/02-decorator-and-adapter.md",
+     "title": "Decorator and Adapter",
+     "summary": "Adding behaviour without changing a class, and making an incompatible interface fit.",
+     "minutes": 35,
+     "stage": "",
+     "blocks": {
+      "design": 1,
+      "why": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1486,
+     "snippets": 11,
+     "headings": [
+      "What are we learning?",
+      "The problem shapes",
+      "Decorator",
+      "Adapter",
+      "Decorator vs. middleware vs. filter vs. AOP",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-12-patterns/03-observer-and-mediator",
+     "path": "content/phase-12-patterns/03-observer-and-mediator.md",
+     "title": "Observer and Mediator",
+     "summary": "Decoupling \"something happened\" from \"here is what to do about it\" — and the cost of doing it.",
+     "minutes": 35,
+     "stage": "",
+     "blocks": {
+      "warn": 1,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1754,
+     "snippets": 10,
+     "headings": [
+      "What are we learning?",
+      "The problem shapes",
+      "Observer",
+      "Mediator",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-12-patterns/04-builder-and-specification",
+     "path": "content/phase-12-patterns/04-builder-and-specification.md",
+     "title": "Builder and Specification",
+     "summary": "Constructing complex objects readably, and making query rules first-class, reusable and testable.",
+     "minutes": 35,
+     "stage": "",
+     "blocks": {
+      "why": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1789,
+     "snippets": 13,
+     "headings": [
+      "What are we learning?",
+      "Builder",
+      "Specification",
+      "Combining expressions is the hard part",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-12-patterns/05-recognising-patterns",
+     "path": "content/phase-12-patterns/05-recognising-patterns.md",
+     "title": "Recognising patterns — and resisting them",
+     "summary": "The skill is not knowing patterns. It is knowing which problem you have, and when the answer is \"none of them\".",
+     "minutes": 35,
+     "stage": "",
+     "blocks": {
+      "warn": 1,
+      "design": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1929,
+     "snippets": 2,
+     "headings": [
+      "What are we learning?",
+      "Problem shapes, not pattern names",
+      "The .NET framework already implements many of them",
+      "Signs you are over-engineering",
+      "The counter-signal: under-engineering",
+      "The refactoring trigger",
+      "Common mistakes"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-13-advanced-csharp",
+   "order": 13,
+   "title": "Advanced C#",
+   "blurb": "Reflection, expression trees, memory and GC, IDisposable, Span<T>, boxing, threading and concurrent collections.",
+   "goal": "Reason about allocations, disposal and thread safety, and measure instead of guessing.",
+   "lessons": [
+    {
+     "id": "phase-13-advanced-csharp/01-reflection-and-source-generators",
+     "path": "content/phase-13-advanced-csharp/01-reflection-and-source-generators.md",
+     "title": "Reflection and source generators",
+     "summary": "Inspecting types at runtime, what it costs, and the compile-time alternative that is replacing it.",
+     "minutes": 40,
+     "stage": "",
+     "blocks": {
+      "why": 1,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1706,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "Reflection",
+      "Measuring the cost",
+      "Source generators",
+      "Writing one",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-13-advanced-csharp/02-expression-trees",
+     "path": "content/phase-13-advanced-csharp/02-expression-trees.md",
+     "title": "Expression trees",
+     "summary": "Code as data — the mechanism behind LINQ providers, and how to build and rewrite one.",
+     "minutes": 40,
+     "stage": "",
+     "blocks": {
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1611,
+     "snippets": 16,
+     "headings": [
+      "What are we learning?",
+      "A lambda, two ways",
+      "Inspecting one",
+      "Building one by hand",
+      "Dynamic sorting — the practical case",
+      "Rewriting with `ExpressionVisitor`",
+      "Compiling",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-13-advanced-csharp/03-memory-gc-disposal",
+     "path": "content/phase-13-advanced-csharp/03-memory-gc-disposal.md",
+     "title": "Memory, the GC and disposal",
+     "summary": "Where objects live, how they are collected, and the deterministic cleanup the GC cannot do for you.",
+     "minutes": 45,
+     "stage": "",
+     "blocks": {
+      "why": 1,
+      "warn": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1921,
+     "snippets": 13,
+     "headings": [
+      "What are we learning?",
+      "Where things live",
+      "Generational collection",
+      "Measuring",
+      "`IDisposable`",
+      "`IAsyncDisposable`",
+      "`using` and lifetime",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-13-advanced-csharp/04-span-and-memory",
+     "path": "content/phase-13-advanced-csharp/04-span-and-memory.md",
+     "title": "Span&lt;T&gt;, Memory&lt;T&gt; and allocation-free code",
+     "summary": "Working with slices of memory without copying — and an honest view of when it matters.",
+     "minutes": 40,
+     "stage": "",
+     "blocks": {
+      "warn": 2,
+      "design": 1,
+      "exercise": 1,
+      "solution": 2,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 2008,
+     "snippets": 15,
+     "headings": [
+      "What are we learning?",
+      "The problem",
+      "What a `Span<T>` is",
+      "Allocation-free string work",
+      "Building strings without allocating",
+      "`ArrayPool<T>`",
+      "When does any of this matter?",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-13-advanced-csharp/05-value-types-and-boxing",
+     "path": "content/phase-13-advanced-csharp/05-value-types-and-boxing.md",
+     "title": "Value types, boxing and performance",
+     "summary": "The hidden allocations that come from treating a value type as an object.",
+     "minutes": 35,
+     "stage": "",
+     "blocks": {
+      "warn": 1,
+      "design": 1,
+      "exercise": 1,
+      "solution": 2,
+      "challenge": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 2109,
+     "snippets": 13,
+     "headings": [
+      "What are we learning?",
+      "Boxing",
+      "Where it happens without you noticing",
+      "Generic constraints prevent boxing",
+      "Seeing boxing",
+      "Struct copying — the other cost",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-13-advanced-csharp/06-threading-and-concurrency",
+     "path": "content/phase-13-advanced-csharp/06-threading-and-concurrency.md",
+     "title": "Threading, locks and concurrent collections",
+     "summary": "Shared mutable state, the bugs it causes, and the primitives that make it safe.",
+     "minutes": 45,
+     "stage": "",
+     "blocks": {
+      "warn": 2,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1861,
+     "snippets": 12,
+     "headings": [
+      "What are we learning?",
+      "The problem",
+      "Atomic operations",
+      "`lock`",
+      "Concurrent collections",
+      "`Channel<T>`",
+      "Thread safety in a web application",
+      "Common mistakes"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-14-production",
+   "order": 14,
+   "title": "Production .NET",
+   "blurb": "Structured logging, health checks, caching, rate limiting, background services, resilience and observability.",
+   "goal": "Operate the API: see what it is doing, protect it from abuse, and keep it alive under failure.",
+   "lessons": [
+    {
+     "id": "phase-14-production/01-observability",
+     "path": "content/phase-14-production/01-observability.md",
+     "title": "Structured logging and observability",
+     "summary": "Logs, metrics and traces — the three signals, and what each one is actually for.",
+     "minutes": 45,
+     "stage": "",
+     "blocks": {
+      "warn": 2,
+      "note": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1894,
+     "snippets": 11,
+     "headings": [
+      "What are we learning?",
+      "The three signals",
+      "Serilog",
+      "Metrics with `System.Diagnostics.Metrics`",
+      "Traces",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-14-production/02-health-checks",
+     "path": "content/phase-14-production/02-health-checks.md",
+     "title": "Health checks and diagnostics",
+     "summary": "Telling an orchestrator whether you are alive, ready, and healthy — three different questions.",
+     "minutes": 30,
+     "stage": "",
+     "blocks": {
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1518,
+     "snippets": 13,
+     "headings": [
+      "What are we learning?",
+      "Three questions",
+      "Setting them up",
+      "A custom check",
+      "Startup probes",
+      "Graceful shutdown",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-14-production/03-caching",
+     "path": "content/phase-14-production/03-caching.md",
+     "title": "Caching",
+     "summary": "Making things fast by not doing them — and the invalidation problem that makes it hard.",
+     "minutes": 40,
+     "stage": "",
+     "blocks": {
+      "warn": 1,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1736,
+     "snippets": 14,
+     "headings": [
+      "What are we learning?",
+      "The layers",
+      "`HybridCache` (.NET 9)",
+      "Output caching",
+      "HTTP caching",
+      "Invalidation",
+      "What not to cache",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-14-production/04-rate-limiting-and-resilience",
+     "path": "content/phase-14-production/04-rate-limiting-and-resilience.md",
+     "title": "Rate limiting and resilience",
+     "summary": "Protecting yourself from callers, and from the services you depend on.",
+     "minutes": 40,
+     "stage": "",
+     "blocks": {
+      "warn": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1674,
+     "snippets": 9,
+     "headings": [
+      "What are we learning?",
+      "Rate limiting",
+      "Outbound resilience",
+      "Back-pressure and shedding",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-14-production/05-background-services",
+     "path": "content/phase-14-production/05-background-services.md",
+     "title": "Background services",
+     "summary": "Work that happens outside a request — and doing it without losing data or leaking scopes.",
+     "minutes": 40,
+     "stage": "",
+     "blocks": {
+      "warn": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1844,
+     "snippets": 11,
+     "headings": [
+      "What are we learning?",
+      "`BackgroundService`",
+      "`PeriodicTimer` over `Task.Delay`",
+      "Queued work",
+      "Several instances",
+      "Scheduling",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-14-production/06-production-configuration",
+     "path": "content/phase-14-production/06-production-configuration.md",
+     "title": "API versioning and production configuration",
+     "summary": "Changing a published API without breaking clients, and the settings that differ in production.",
+     "minutes": 35,
+     "stage": "",
+     "blocks": {
+      "design": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1582,
+     "snippets": 14,
+     "headings": [
+      "What are we learning?",
+      "Versioning",
+      "Deprecation",
+      "Production configuration",
+      "Common mistakes"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-15-docker",
+   "order": 15,
+   "title": "Docker & Deployment",
+   "blurb": "Images, containers, Dockerfiles, compose, and running the whole stack the way a server would.",
+   "goal": "Build and run the entire application with one command on any machine that has Docker.",
+   "lessons": [
+    {
+     "id": "phase-15-docker/01-docker-fundamentals",
+     "path": "content/phase-15-docker/01-docker-fundamentals.md",
+     "title": "Docker fundamentals",
+     "summary": "Images, layers and containers — the mental model that makes everything else obvious.",
+     "minutes": 35,
+     "stage": "Stage 8",
+     "blocks": {
+      "why": 1,
+      "warn": 2,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1757,
+     "snippets": 13,
+     "headings": [
+      "What are we learning?",
+      "The model",
+      "A container is not a virtual machine",
+      "The commands",
+      "Data does not survive",
+      "Networking",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-15-docker/02-dockerfile-for-dotnet",
+     "path": "content/phase-15-docker/02-dockerfile-for-dotnet.md",
+     "title": "A production Dockerfile for .NET",
+     "summary": "Multi-stage builds, small secure images, and the details that matter in a container.",
+     "minutes": 40,
+     "stage": "Stage 8",
+     "blocks": {
+      "why": 1,
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1806,
+     "snippets": 15,
+     "headings": [
+      "What are we learning?",
+      "The naive version, and why it is wrong",
+      "Multi-stage",
+      "Globalization on Alpine",
+      "`.dockerignore`",
+      "Signals and PID 1",
+      "Health checks",
+      "Chiselled and distroless images",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-15-docker/03-docker-compose",
+     "path": "content/phase-15-docker/03-docker-compose.md",
+     "title": "Docker Compose",
+     "summary": "Running the whole stack with one command — and making the pieces start in the right order.",
+     "minutes": 35,
+     "stage": "Stage 8",
+     "blocks": {
+      "warn": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "solution": 1,
+      "project": 1,
+      "interview": 1,
+      "checkpoint": 1,
+      "mistake": 1
+     },
+     "words": 1657,
+     "snippets": 16,
+     "headings": [
+      "What are we learning?",
+      "The full stack",
+      "Start order",
+      "Required variables",
+      "Overrides",
+      "Profiles",
+      "The commands",
+      "Running locally",
+      "Common mistakes"
+     ]
+    },
+    {
+     "id": "phase-15-docker/04-project-deployment",
+     "path": "content/phase-15-docker/04-project-deployment.md",
+     "title": "Checkpoint: TaskFlow, containerised",
+     "summary": "Stage 8 — the whole application running with one command, ready to deploy.",
+     "minutes": 90,
+     "stage": "Stage 8",
+     "blocks": {
+      "stop": 1,
+      "checkpoint": 2,
+      "project": 1,
+      "solution": 1,
+      "interview": 1
+     },
+     "words": 1095,
+     "snippets": 4,
+     "headings": [
+      "What are we learning?",
+      "The deliverable",
+      "Requirements",
+      "Checkpoint"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phase-16-capstone",
+   "order": 16,
+   "title": "Capstone & Interview Prep",
+   "blurb": "Finishing the application, reviewing every decision, and being able to defend the code you wrote.",
+   "goal": "Walk another engineer through TaskFlow end to end and answer the questions they ask about it.",
+   "lessons": [
+    {
+     "id": "phase-16-capstone/01-finishing-the-application",
+     "path": "content/phase-16-capstone/01-finishing-the-application.md",
+     "title": "Finishing TaskFlow",
+     "summary": "The gap between \"the tutorial is done\" and \"I would put my name on this\".",
+     "minutes": 120,
+     "stage": "",
+     "blocks": {
+      "stop": 1,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "solution": 1,
+      "checkpoint": 1
+     },
+     "words": 1271,
+     "snippets": 2,
+     "headings": [
+      "What are we learning?",
+      "What TaskFlow should already do",
+      "What is probably missing",
+      "The polish that signals care",
+      "The self-review"
+     ]
+    },
+    {
+     "id": "phase-16-capstone/02-interview-preparation",
+     "path": "content/phase-16-capstone/02-interview-preparation.md",
+     "title": "Explaining what you built",
+     "summary": "Turning six months of work into answers you can give under pressure.",
+     "minutes": 90,
+     "stage": "",
+     "blocks": {
+      "why": 1,
+      "design": 1,
+      "exercise": 1,
+      "challenge": 1,
+      "project": 1,
+      "solution": 1,
+      "checkpoint": 1,
+      "recap": 1
+     },
+     "words": 2145,
+     "snippets": 0,
+     "headings": [
+      "What are we learning?",
+      "The two-minute walkthrough",
+      "The questions you will be asked",
+      "The questions that are really about judgement",
+      "The live exercise",
+      "The last word"
+     ]
+    }
+   ]
+  }
+ ],
+ "totals": {
+  "phases": 17,
+  "lessons": 104,
+  "minutes": 4390,
+  "exercises": 99,
+  "challenges": 89,
+  "projectSteps": 103,
+  "snippets": 1064
+ }
+}
